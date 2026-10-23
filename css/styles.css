@@ -97,7 +97,7 @@ h3 { margin: 0 0 8px; font-size: 1.45rem; line-height: 1.25; }
   font-size: 0.78rem;
   font-weight: 600;
 }
-.brand svg { width: 28px; height: 22px; }
+.brand img { height: 48px; width: auto; display: block; }
 .nav {
   display: flex;
   align-items: center;
@@ -127,12 +127,14 @@ h3 { margin: 0 0 8px; font-size: 1.45rem; line-height: 1.25; }
   transition: transform 0.2s ease, filter 0.2s ease, background 0.2s ease;
 }
 .btn svg { width: 18px; height: 18px; flex: none; }
-.btn-gold {
+a.btn.btn-gold,
+button.btn.btn-gold {
   background: linear-gradient(180deg, #f8d48c 0%, #e4ab56 48%, #c9963a 100%);
-  color: var(--ink);
+  color: #1a1208;
   box-shadow: 0 12px 32px rgba(228, 171, 86, 0.22);
 }
-.btn-gold:hover { transform: translateY(-1px); filter: brightness(1.05); }
+a.btn.btn-gold:hover,
+button.btn.btn-gold:hover { transform: translateY(-1px); filter: brightness(1.05); color: #1a1208; }
 .btn-ghost {
   background: rgba(255, 255, 255, 0.02);
   color: var(--cream);
@@ -435,7 +437,7 @@ section { padding: 78px 0; scroll-margin-top: 90px; }
 
 .module {
   display: grid;
-  grid-template-columns: 150px 1fr;
+  grid-template-columns: 72px 1fr;
   gap: 22px;
   padding: 28px 0;
   border-top: 1px solid var(--line);
@@ -567,7 +569,7 @@ section { padding: 78px 0; scroll-margin-top: 90px; }
   object-position: center center;
 }
 .signature {
-  margin: 0;
+  margin: 0 0 14px;
   font-family: "Great Vibes", cursive;
   font-size: clamp(3.2rem, 6vw, 4.8rem);
   line-height: 0.9;
@@ -762,6 +764,7 @@ section { padding: 78px 0; scroll-margin-top: 90px; }
 @media (max-width: 720px) {
   body.has-mobile-bar { padding-bottom: 84px; }
   .wrap { width: min(var(--wrap), calc(100% - 28px)); }
+  .brand img { height: 40px; }
   .hero { padding-top: 18px; }
   .pillars, .facts, .module { grid-template-columns: 1fr; }
   .coffee { padding: 28px 18px; }
